@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.javier.paint1.MainActivity"
+    tools:layout_editor_absoluteY="25dp">
+
+    <view
+        android:id="@+id/view"
+        class="com.example.javier.paint1.PaintView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Line"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonRect"
+        app:layout_constraintStart_toStartOf="@+id/view" />
+
+    <Button
+        android:id="@+id/buttonRect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rect"
+        app:layout_constraintStart_toEndOf="@+id/buttonLine"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+    <Button
+        android:id="@+id/buttonCircle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Circle"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonRect"
+        app:layout_constraintStart_toEndOf="@+id/buttonRect" />
+
+    <Button
+        android:id="@+id/buttonPath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Path"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonCircle"
+        app:layout_constraintStart_toEndOf="@+id/buttonCircle" />
+
+    <Button
+        android:id="@+id/buttonRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Red"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonGreen"
+        app:layout_constraintStart_toStartOf="@+id/view" />
+
+    <Button
+        android:id="@+id/buttonGreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Green"
+        app:layout_constraintStart_toEndOf="@+id/buttonLine"
+        app:layout_constraintTop_toBottomOf="@+id/buttonLine" />
+
+    <Button
+        android:id="@+id/buttonBlue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Blue"
+        app:layout_constraintStart_toEndOf="@+id/buttonRect"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRect" />
+
+    <Button
+        android:id="@+id/buttonYellow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yellow"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonBlue"
+        app:layout_constraintStart_toEndOf="@+id/buttonCircle" />
+
+    <Button
+        android:id="@+id/buttonStroke"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Stroke"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonFill"
+        app:layout_constraintStart_toStartOf="@+id/view" />
+
+    <Button
+        android:id="@+id/buttonFill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fill"
+        app:layout_constraintStart_toEndOf="@+id/buttonRed"
+        app:layout_constraintTop_toBottomOf="@+id/buttonRed" />
+
+    <Button
+        android:id="@+id/buttonNarrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Narrow"
+        app:layout_constraintBaseline_toBaselineOf="@+id/buttonFill"
+        app:layout_constraintStart_toEndOf="@+id/buttonGreen" />
+
+    <Button
+        android:id="@+id/buttonWider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:text="Wider"
+        app:layout_constraintStart_toStartOf="@+id/buttonYellow"
+        app:layout_constraintTop_toBottomOf="@+id/buttonYellow" />
+
+</android.support.constraint.ConstraintLayout>
